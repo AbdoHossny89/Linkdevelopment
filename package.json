@@ -1,0 +1,31 @@
+{
+  "name": "linkdevelopment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abdo",
+  "license": "ISC",
+  "dependencies": {
+    "gulp-imagemin": "^7.1.0",
+    "start": "^5.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "mozjpeg": "^8.0.0",
+    "node-sass": "^9.0.0",
+    "optipng-bin": "^9.0.0",
+    "pngquant-bin": "^8.0.1",
+    "sass": "^1.69.4"
+  }
+}

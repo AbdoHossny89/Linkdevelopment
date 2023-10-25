@@ -1,0 +1,91 @@
+footer {
+    padding: 25px 0;
+
+    .logo_footer {
+        p {
+            font-family: $family-poppins-med;
+            font-size: .8rem;
+            color: #5E6282;
+        }
+    }
+
+    .quick_links {
+        h5 {
+            font-family: $family-poppins-bold;
+            margin-bottom: 20px;
+        }
+
+        li {
+
+            list-style: none;
+            margin-bottom: 10px;
+
+            a {
+                font-size: 1.14rem;
+                font-family: $family-poppins-med;
+                color: #5e6282;
+
+            }
+
+        }
+
+    }
+
+    .social_media {
+        .social_links {
+            list-style: none;
+
+            li {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                background-color: #fff;
+                box-shadow: (0px 2px 20px rgba(0, 0, 0, 0.1));
+                text-align: center;
+                line-height: 45px;
+                margin: 0 15px;
+
+            }
+        }
+
+        h5 {
+
+            font-family: $family-poppins-med;
+
+            color: #5e6282;
+
+        }
+
+        .stores {
+            a {
+                width: 110px;
+                height: 35px;
+                border-radius: 17.5px;
+                background: #080809;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+
+                svg {
+                    margin-right: 10px;
+                }
+
+                span {
+                    font-size: 8px;
+                    font-family: $family-poppins;
+                    color: #fff;
+                }
+
+            }
+        }
+    }
+
+    .rights {
+
+        font-family: $family-poppins-med;
+        font-size: 14px;
+
+        color: #5e6282;
+
+    }
+}

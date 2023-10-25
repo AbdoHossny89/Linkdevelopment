@@ -1,0 +1,396 @@
+@keyframes fadeInRightSlide {
+    0% {
+        -webkit-transform: translateX(-100px);
+        transform: translateX(-100px);
+    }
+
+    100% {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.fadeInRightSlide {
+    -webkit-animation-name: fadeInRightSlide;
+    animation-name: fadeInRightSlide;
+}
+
+@keyframes fadeInLeftSlide {
+    0% {
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+    }
+
+    100% {
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.fadeInLeftSlide {
+    -webkit-animation-name: fadeInLeftSlide;
+    animation-name: fadeInLeftSlide;
+}
+
+@keyframes fadeImage {
+    0% {
+        background-image: url(../images/decore2.svg);
+
+    }
+
+    100% {
+        background-image: url(../images/decore1.svg);
+
+    }
+}
+
+.fadeImage {
+    -webkit-animation-name: fadeImage;
+    animation-name: fadeImage;
+}
+
+@keyframes fadeImage2 {
+    0% {
+        background-image: url(../images/decore1.svg);
+
+    }
+
+    100% {
+        background-image: url(../images/decore2.svg);
+
+    }
+}
+
+.fadeImage2 {
+    -webkit-animation-name: fadeImage2;
+    animation-name: fadeImage2;
+}
+
+@keyframes fadeImage3 {
+    0% {
+        background-image: url(../images/decore2.svg);
+
+    }
+
+    100% {
+        background-image: url(../images/decore3.svg);
+
+    }
+}
+
+.fadeImage3 {
+    -webkit-animation-name: fadeImage3;
+    animation-name: fadeImage3;
+}
+
+.wrap-slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 575.98px) {
+        flex-direction: column-reverse;
+    }
+
+    .decore {
+
+        width: 40%;
+        height: 614px;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-position: top right;
+        transition: all 4s;
+        background-repeat: no-repeat;
+        @media (max-width: 1399.98px) { 
+            background-size: contain;
+
+        }
+        @media (max-width: 991.98px) {
+            width: 100%;
+            height: 350px;
+            background-size: contain;
+
+        }
+
+    }
+}
+
+.slick-slide {
+    &:nth-child(1) {
+        .decore {
+            background-image: url(../images/decore1.svg);
+
+        }
+
+        &.slick-active .img-slide {
+            animation-name: fadeInRightSlide;
+            animation-duration: 1s;
+            opacity: 1;
+        }
+
+        &.slick-active .decore {
+            animation-name: fadeImage;
+            animation-duration: 1s;
+            opacity: 1;
+        }
+
+    }
+
+    &:nth-child(2) {
+        .decore {
+            background-image: url(../images/decore2.svg);
+
+        }
+
+        &.slick-active .img-slide {
+            animation-name: fadeInRightSlide;
+            animation-duration: 1s;
+            opacity: 1;
+        }
+
+        &.slick-active .decore {
+            animation-name: fadeImage2;
+            animation-duration: 1s;
+            opacity: 1;
+        }
+    }
+
+    &:nth-child(3) {
+        .decore {
+            background-image: url(../images/decore3.svg);
+
+        }
+
+        &.slick-active .img-slide {
+            animation-name: fadeInLeftSlide;
+            animation-duration: 1s;
+            opacity: 1;
+        }
+
+        &.slick-active .decore {
+            animation-name: fadeImage3;
+            animation-duration: 1s;
+            opacity: 1;
+        }
+    }
+}
+
+.banner_slider {
+    margin: 0 !important;
+}
+
+.home_banner {
+    position: relative;
+}
+
+.slide {
+    padding-top: 65px;
+    position: relative;
+
+    .left-section {
+        width: 50%;
+
+        @media (max-width: 575.98px) {
+            width: 100%;
+        }
+    }
+
+    .img-slide {
+        width: 60%;
+
+    }
+
+    h5 {
+        color: $pink-color;
+        font-family: $family-poppins-bold;
+    }
+
+
+    h2 {
+        color: #181E4B;
+        font-family: $family-volkhov;
+        position: relative;
+        margin: 20px 0;
+
+        @media (max-width: 991.98px) {
+            font-size: 3rem;
+        }
+
+        &:before {
+            content: "";
+            width: 385px;
+            height: 12px;
+            position: absolute;
+            left: 50%;
+            top: 50px;
+            z-index: -1;
+            background: url(../images/bghead1.svg)no-repeat;
+
+            @media (max-width: 575.98px) {
+                top: 20px
+            }
+        }
+    }
+
+    p {
+        color: #5E6282;
+        height: 72px;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    .slide-action {
+        display: flex;
+        align-items: center;
+        margin: 40px 0 30px;
+
+        @media (max-width: 575.98px) {
+            margin: 10px 0;
+
+        }
+
+        .btn-play {
+            display: inline-flex;
+            align-items: center;
+            color: #686d77;
+
+
+            svg {
+                margin-right: 20px;
+                @include border-radius(50%);
+                box-shadow: 0px 15px 60px rgba(223, 105, 81, 0.3);
+
+            }
+        }
+    }
+
+    &.slide-green {
+        h5 {
+            color: $green-color;
+        }
+
+
+        h2 {
+
+
+            &:before {
+
+                background: url(../images/bghead2.svg)no-repeat;
+
+            }
+        }
+    }
+
+    &.slide-orange {
+
+        h5 {
+            color: $orange-color;
+        }
+
+
+        h2 {
+
+
+            &:before {
+
+                background: url(../images/bghead3.svg)no-repeat;
+
+            }
+        }
+    }
+}
+
+.dots-slide {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+
+    @media (max-width: 767.98px) {
+        position: relative;
+        bottom: 0;
+
+    }
+
+}
+
+.slider-nav {
+    &::before {
+        content: "";
+
+        position: absolute;
+        left: 0;
+        top: calc(50% - 2px);
+        width: 100%;
+        height: 4px;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="316.019" height="5.019" viewBox="0 0 316.019 5.019"><line id="Line_4" data-name="Line 4" x2="313" y2="2" transform="translate(1.51 1.51)" fill="none" stroke="%23353535" stroke-linecap="round" stroke-width="3" stroke-dasharray="0 16"/></svg>');
+    }
+
+    .slick-list {
+        padding: 0 !important;
+    }
+
+    .slick-track {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100% !important;
+        display: flex !important;
+        transform: translate3d(0, 0, 0) !important;
+        height: 60px;
+
+        &::before,
+        &:after {
+            display: none;
+        }
+
+    }
+
+    .slick-slide {
+        display: inline-block;
+        height: 52px !important;
+        cursor: pointer;
+
+        >div {
+            width: 52px !important;
+            display: inline-flex;
+            height: inherit;
+            align-items: center;
+        }
+
+
+        .lnk {
+            width: 40px !important;
+            height: 40px;
+            border-radius: 50%;
+            background: $pink-color;
+            border: 4px solid #fff;
+            display: inline-block;
+
+            &.lnk-slide2 {
+                background: $green-color;
+
+
+            }
+
+            &.lnk-slide3 {
+                background: $orange-color;
+
+
+            }
+        }
+
+        &.slick-current {
+            .lnk {
+                width: 52px !important;
+                height: 52px;
+                border-width: 6px;
+                transition: all 1s;
+            }
+        }
+
+    }
+
+
+}

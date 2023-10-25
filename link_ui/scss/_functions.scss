@@ -1,0 +1,81 @@
+$family-googlesans:'google_sansregular';
+$family-googlesans-med:'google_sansmedium';
+$family-googlesans-bold:'google_sansbold';
+
+$family-poppins:'poppins-regular';
+$family-poppins-med:'poppins-medium';
+$family-poppins-semibold:'poppins-semibold';
+$family-poppins-bold:'poppins-bold';
+
+$family-volkhov:'Volkhov-Bold';
+
+@mixin fontFace($family-poppins, $src, $style: normal, $weight: normal) {
+    @font-face {
+        font-family: $family-poppins;
+        src: url('#{$src}.eot'); // IE9 compat
+        src: url('#{$src}.eot?#iefix') format('embedded-opentype'), // IE8 and below
+        url('#{$src}.woff') format('woff'), // standards
+        url('#{$src}.ttf') format('truetype'), // Safari, Android, iOS
+        url('#{$src}.svg##{$family-poppins}') format('svg'); // legacy iOS
+        font-style: $style;
+        font-weight: $weight;
+    }
+}
+
+@include fontFace($family-googlesans,
+'../fonts/googlesans/googlesans-regular');
+@include fontFace($family-googlesans-med,
+'../fonts/googlesans/googlesans-medium');
+@include fontFace($family-googlesans-bold,
+'../fonts/googlesans/googlesans-bold');
+
+@include fontFace($family-poppins,
+'../fonts/poppins/poppins-regular');
+@include fontFace($family-poppins-med,
+'../fonts/poppins/poppins-medium');
+@include fontFace($family-poppins-semibold,
+'../fonts/poppins/poppins-semibold');
+@include fontFace($family-poppins-bold,
+'../fonts/poppins/poppins-bold');
+
+@include fontFace($family-volkhov,
+'../fonts/volkhov/Volkhov-Bold');
+
+body {
+    font-family: $family-poppins-med;
+}
+
+@mixin border-top-left-radius($value) {
+    -webkit-border-top-left-radius: $value;
+    -moz-border-top-left-radius: $value;
+    -ms-border-top-left-radius: $value;
+    border-top-left-radius: $value;
+}
+
+@mixin border-top-right-radius($value) {
+    -webkit-border-top-right-radius: $value;
+    -moz-border-top-right-radius: $value;
+    -ms-border-top-right-radius: $value;
+    border-top-right-radius: $value;
+}
+
+@mixin border-bottom-left-radius($value) {
+    -webkit-border-bottom-left-radius: $value;
+    -moz-border-bottom-left-radius: $value;
+    -ms-border-bottom-left-radius: $value;
+    border-bottom-left-radius: $value;
+}
+
+@mixin border-bottom-right-radius($value) {
+    -webkit-border-bottom-right-radius: $value;
+    -moz-border-bottom-right-radius: $value;
+    -ms-border-bottom-right-radius: $value;
+    border-bottom-right-radius: $value;
+}
+
+@mixin border-radius($value) {
+    -webkit-border-radius: $value;
+    -moz-border-radius: $value;
+    -ms-border-radius: $value;
+    border-radius: $value;
+}
